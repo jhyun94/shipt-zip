@@ -4,6 +4,7 @@ import '../App.css';
 
 import Promotional from './Promotional';
 import Header from './Header';
+import Landing from './Landing';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Header />
         <BrowserRouter>
           <div>
+            <Route exact path="/" component={Landing} />
           </div>
         </BrowserRouter>
       </div>
