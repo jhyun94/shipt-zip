@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
 
-import * as actions from '../actions';
+import * as actions from '../actions'
 import step1 from '../images/step-1.png';
 import step2 from '../images/step-2.png';
 import step3 from '../images/step-3.png';
@@ -26,6 +26,7 @@ class Landing extends Component {
 
 	render() {
 		const { handleSubmit } = this.props;
+		console.log(this.props.stores);
 		return (
 			<div>
 				<div className="container">
@@ -86,6 +87,10 @@ class Landing extends Component {
 	}
 }
 
+function mapStateToProps({stores}) {
+	return { stores }
+}
+
 export default reduxForm({
 	form: 'zipcode'
-})(connect(null, actions)(Landing))
+})(connect(mapStateToProps, actions)(Landing))
