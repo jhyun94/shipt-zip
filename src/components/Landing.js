@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { reduxForm, Field } from 'redux-form';
 
+import * as actions from '../actions';
 import step1 from '../images/step-1.png';
 import step2 from '../images/step-2.png';
 import step3 from '../images/step-3.png';
@@ -7,7 +10,22 @@ import step3 from '../images/step-3.png';
 
 class Landing extends Component {
 
+	inputField(field) {
+		return (
+			<div className="form-group">
+				<input type="text" className="form-control" placeholder="Enter Zipcode"
+				{...field.input}
+				/>
+			</div>
+		)
+	}
+
+	onSubmit(values) {
+		this.props.fetchStores(values);
+	}
+
 	render() {
+		const { handleSubmit } = this.props;
 		return (
 			<div>
 				<div className="container">
@@ -15,10 +33,11 @@ class Landing extends Component {
 						<div className="text-center text-white">
 							<h1 className="">Target exclusive offer.</h1>
 							<h2>$49 membership (reg. $99) + $15 credit with qualifying purchase.*</h2>
-							<form className="form-inline justify-content-center">
-								<div className="form-group">
-									<input placeholder="Enter Zip code" className="form-control" type="text" />
-								</div>
+							<form className="form-inline justify-content-center" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+								<Field
+									name="zipcode"
+									component={this.inputField}
+								/>
 								<div className="form-group">
 									<button type="submit" className="btn btn-primary">Get Started</button>
 								</div>
@@ -67,4 +86,6 @@ class Landing extends Component {
 	}
 }
 
-export default Landing;
+export default reduxForm({
+	form: 'zipcode'
+})(connect(null, actions)(Landing))
