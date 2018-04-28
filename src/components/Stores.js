@@ -1,11 +1,21 @@
 import React , { Component } from 'react';
+import _ from 'lodash';
 
 class Stores extends Component {
 
 	renderStores() {
 		console.log(this.props.stores);
 		return (
-			<div></div>
+			_.map( this.props.stores,  (store) => {
+				return (
+					<div key={store.id} className="col-md-4">
+						<div className="text-center">
+							<h4>{store.name}</h4>
+							<p>{store.launch_date}</p>
+						</div>
+					</div>
+				)
+			})
 		)
 	}
 
@@ -13,7 +23,7 @@ class Stores extends Component {
 	render() {
 		return (
 			<div className="container">
-				<h4>Delivering From</h4>
+				<h4 className="text-center">Delivering From</h4>
 				<div className="row">
 					{this.renderStores()}
 				</div>
