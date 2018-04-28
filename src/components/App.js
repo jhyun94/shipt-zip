@@ -5,6 +5,7 @@ import '../App.css';
 import Promotional from './Promotional';
 import Header from './Header';
 import Landing from './Landing';
+import Footer from './Footer';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
           </div>
         </BrowserRouter>
+        <Footer />
       </div>
     );
   }
