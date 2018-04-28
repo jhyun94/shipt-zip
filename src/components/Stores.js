@@ -4,9 +4,10 @@ import _ from 'lodash';
 class Stores extends Component {
 
 	renderStores() {
-		console.log(this.props.stores);
+		const stores = _.sortBy(this.props.stores, 'name');
+
 		return (
-			_.map( this.props.stores,  (store) => {
+			_.map( stores,  (store) => {
 				return (
 					<div key={store.id} className="col-md-4">
 						<div className="text-center">
