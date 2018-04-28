@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
 
+import Stores from './Stores';
 import * as actions from '../actions'
 import step1 from '../images/step-1.png';
 import step2 from '../images/step-2.png';
@@ -26,7 +27,6 @@ class Landing extends Component {
 
 	render() {
 		const { handleSubmit } = this.props;
-		console.log(this.props.stores);
 		return (
 			<div>
 				<div className="container">
@@ -49,6 +49,8 @@ class Landing extends Component {
 						</div>
 					</div>
 				</div>
+				
+				{ this.props.stores ? <Stores stores={this.props.stores}/> : <div></div> }
 
 				<div className="container">
 					<div className="row">
