@@ -3,16 +3,18 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import '../App.css';
 
 import Promotional from './Promotional';
+import Header from './Header';
 
 class App extends Component {
   render() {
     return (
       <div>
         <Promotional />
-      <BrowserRouter>
-        <div>
-        </div>
-      </BrowserRouter>
+        <Header />
+        <BrowserRouter>
+          <div>
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
