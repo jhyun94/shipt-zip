@@ -91,11 +91,10 @@ class Landing extends Component {
 							</p>
 						</div>
 
+						<div className="col-lg-4 offset-lg-4 my-5">
+							<a className="btn btn-primary btn-lg btn-block" href="/">GET STARTED</a>
+						</div>
 					</div>
-				</div>
-
-				<div className="text-center my-4">
-					<a className="btn btn-primary btn-lg" href="/">Get Started</a>
 				</div>
 			</div>
 		)
