@@ -88,7 +88,7 @@ class Landing extends Component {
 				</div>
 
 				<div className="text-center my-4">
-					<button className="btn btn-primary btn-lg">Get Started</button>
+					<a className="btn btn-primary btn-lg" href="/">Get Started</a>
 				</div>
 			</div>
 		)
@@ -102,9 +102,6 @@ function validate(field) {
 	if (!isPostalCode(zip || '', 'US')) {
 		errors.zipcode = 'Enter a valid ZIP code';
 	}
-
-	console.log(zip)
-	console.log(errors)
 
 	return errors;
 }
