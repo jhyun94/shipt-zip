@@ -14,10 +14,15 @@ class Landing extends Component {
 
 	inputField(field) {
 		return (
-			<div className="form-group">
-				<input type="text" className="form-control" placeholder="Enter Zipcode"
-				{...field.input}
-				/>
+			<div>
+				<div className="input-group justify-content-center input-group-lg">
+					<input type="text" className="form-control" placeholder="Enter ZIP code"
+					{...field.input}
+					/>
+					<div className="input-group-append">
+						<button type="submit" className="btn btn-primary">GET STARTED</button>
+					</div>
+				</div>
 				<div className="text-help">
 					{field.meta.touched && field.meta.error ? field.meta.error : ''}
 				</div>
@@ -33,25 +38,22 @@ class Landing extends Component {
 		const { handleSubmit } = this.props;
 		return (
 			<div>
-				<div className="container">
-					<div className="bg-target">
+				<div className="container my-3">
+					<div className="bg-target py-3 px-3">
 						<div className="text-center text-white">
-							<h1 className="">Target exclusive offer.</h1>
-							<h2>$49 membership (reg. $99) + $15 credit with qualifying purchase.*</h2>
+							<h1 className="h1 display-4">Target exclusive offer.</h1>
+							<h5>$49 membership (reg. $99) + $15 credit with qualifying purchase.*</h5>
 							<form className="form" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-								<div className="form-row no-gutters justify-content-center">
+								<div className="text-center">
 										<Field
 											name="zipcode"
 											component={this.inputField}
 										/>
-										<div className="form-group">
-											<button type="submit" className="btn btn-primary">Get Started</button>
-										</div>
 								</div>
 							</form>
-							<p>*Membership offer valid for new members only. Target order of $100 or more must be 
+							<p><small>*Membership offer valid for new members only. Target order of $100 or more must be 
 							placed to qualify for $15 credit, which expires 30 days after qualifying order is placed 
-							and can be applied to any order from Shipt.</p>
+							and can be applied to any order from Shipt.</small></p>
 						</div>
 					</div>
 				</div>
