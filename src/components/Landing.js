@@ -40,20 +40,22 @@ class Landing extends Component {
 			<div>
 				<div className="container my-3">
 					<div className="bg-target py-3 px-3">
-						<div className="text-center text-white">
-							<h1 className="h1 display-4">Target exclusive offer.</h1>
-							<h5>$49 membership (reg. $99) + $15 credit with qualifying purchase.*</h5>
-							<form className="form" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-								<div className="text-center">
-										<Field
-											name="zipcode"
-											component={this.inputField}
-										/>
-								</div>
-							</form>
-							<p><small>*Membership offer valid for new members only. Target order of $100 or more must be 
-							placed to qualify for $15 credit, which expires 30 days after qualifying order is placed 
-							and can be applied to any order from Shipt.</small></p>
+						<div className="row">
+							<div className="text-white col-md-8 offset-md-2 text-center">
+								<h1 className="h1 display-4">Target exclusive offer.</h1>
+								<h5>$49 membership (reg. $99) + $15 credit with qualifying purchase.*</h5>
+								<form className="form" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+									<div className="text-center">
+											<Field
+												name="zipcode"
+												component={this.inputField}
+											/>
+									</div>
+								</form>
+								<p><small>*Membership offer valid for new members only. Target order of $100 or more must be 
+								placed to qualify for $15 credit, which expires 30 days after qualifying order is placed 
+								and can be applied to any order from Shipt.</small></p>
+							</div>
 						</div>
 					</div>
 				</div>
