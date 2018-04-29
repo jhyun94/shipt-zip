@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
+import isPostalCode from 'validator/lib/isPostalCode';
 
 import Stores from './Stores';
 import * as actions from '../actions'
@@ -17,6 +18,9 @@ class Landing extends Component {
 				<input type="text" className="form-control" placeholder="Enter Zipcode"
 				{...field.input}
 				/>
+				<div className="text-help">
+					{field.meta.touched && field.meta.error ? field.meta.error : ''}
+				</div>
 			</div>
 		)
 	}
@@ -34,13 +38,15 @@ class Landing extends Component {
 						<div className="text-center text-white">
 							<h1 className="">Target exclusive offer.</h1>
 							<h2>$49 membership (reg. $99) + $15 credit with qualifying purchase.*</h2>
-							<form className="form-inline justify-content-center" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-								<Field
-									name="zipcode"
-									component={this.inputField}
-								/>
-								<div className="form-group">
-									<button type="submit" className="btn btn-primary">Get Started</button>
+							<form className="form" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+								<div className="form-row no-gutters justify-content-center">
+										<Field
+											name="zipcode"
+											component={this.inputField}
+										/>
+										<div className="form-group">
+											<button type="submit" className="btn btn-primary">Get Started</button>
+										</div>
 								</div>
 							</form>
 							<p>*Membership offer valid for new members only. Target order of $100 or more must be 
@@ -89,10 +95,25 @@ class Landing extends Component {
 	}
 }
 
+function validate(field) {
+	let errors = {};
+	const zip = field.zipcode;
+
+	if (!isPostalCode(zip || '', 'US')) {
+		errors.zipcode = 'Enter a valid ZIP code';
+	}
+
+	console.log(zip)
+	console.log(errors)
+
+	return errors;
+}
+
 function mapStateToProps({stores}) {
 	return { stores }
 }
 
 export default reduxForm({
+	validate: validate,
 	form: 'zipcode'
 })(connect(mapStateToProps, actions)(Landing))
