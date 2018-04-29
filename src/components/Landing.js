@@ -41,7 +41,7 @@ class Landing extends Component {
 				<div className="container my-3">
 					<div className="bg-target py-3 px-3">
 						<div className="row">
-							<div className="text-white col-md-8 offset-md-2 text-center">
+							<div className="text-white col-lg-8 offset-lg-2 text-center">
 								<h1 className="h1 display-4">Target exclusive offer.</h1>
 								<h5>$49 membership (reg. $99) + $15 credit with qualifying purchase.*</h5>
 								<form className="form" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
@@ -62,32 +62,35 @@ class Landing extends Component {
 				
 				{ this.props.stores ? <Stores stores={this.props.stores}/> : <div></div> }
 
-				<div className="container">
+				<div className="container py-3 px-3">
 					<div className="row">
-						<div className="col-md-4">
+						<div className="col-lg-8 offset-lg-2 px-3">
+							<h2 className="text-center">Everything you love about Target at your fingertips</h2>
+						</div>
+						<div className="col-lg-4 text-center">
 							<img src={step1} alt="step 1" className="img-fluid"/>
-							<h4>Scroll through the aisles.</h4>
-							<p>Create an order from your local store in our app or
+							<h4 className="px-5">Scroll through the aisles.</h4>
+							<p className="px-3">Create an order from your local store in our app or
 								on our website.
 							</p>
-
 						</div>
 
-						<div className="col-md-4">
+						<div className="col-lg-4 text-center">
 							<img src={step2} alt="step 2" className="img-fluid"/>
-							<h4>Our shoppers work their magic.</h4>
-							<p>Connect with your shopper and get live updates from
+							<h4 className="px-5">Our shoppers work their magic.</h4>
+							<p className="px-3">Connect with your shopper and get live updates from
 								the aisles.
 							</p>
 						</div>
 
-						<div className="col-md-4">
+						<div className="col-lg-4 text-center">
 							<img src={step3} alt="step 3" className="img-fluid"/>
-							<h4>We deliver your groceries.</h4>
-							<p>Schedule a delivery, and your order will arrive in
+							<h4 className="px-5">We deliver your groceries.</h4>
+							<p className="px-3">Schedule a delivery, and your order will arrive in
 								as soon as 1 hour.
 							</p>
 						</div>
+
 					</div>
 				</div>
 
