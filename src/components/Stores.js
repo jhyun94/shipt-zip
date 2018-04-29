@@ -8,10 +8,10 @@ class Stores extends Component {
 		return (
 			_.map( stores,  (store) => {
 				return (
-					<div key={store.id} className="col-md-4">
+					<div key={store.id} className="col-md-4 my-5">
 						<div className="text-center">
-							<h4>{store.name}</h4>
-							<p>{this.checkDate(store.launch_date)}</p>
+							<h3 className="mb-4">{store.name}</h3>
+							<p className="text-secondary"><small>{this.checkDate(store.launch_date)}</small></p>
 						</div>
 					</div>
 				)
@@ -39,7 +39,7 @@ class Stores extends Component {
 	render() {
 		return (
 			<div className="container">
-				<h4 className="text-center">Delivering From</h4>
+				<p className="text-center"><small>Delivering From:</small></p>
 				<div className="row">
 					{this.renderStores()}
 				</div>
