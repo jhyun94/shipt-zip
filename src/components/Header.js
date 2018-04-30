@@ -5,10 +5,12 @@ import logo from '../images/logo.svg';
 const Header = () => {
 
 	return (
-		<div className="navbar border-bottom">
+		<div className="navbar border-bottom py-3">
 			<div className="container">
 				<a href="/" className="navbar-brand"><img src={logo} alt="logo"/></a>
-				<a className="btn btn-primary btn-lg" href="/">SIGN UP</a>
+				<ul className="list-unstyled mb-0">
+					<li><a className="btn btn-primary btn-lg" href="/">SIGN UP</a></li>
+				</ul>
 			</div>
 		</div>
 	)

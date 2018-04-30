@@ -30,8 +30,8 @@ a:visited, a:hover {
 	color: #fff;
 }
 
-.btn-primary:hover, .btn-primary:visited {
-	background-color: #71b045;
+.btn-primary:hover {
+	background-color: #5B8E2D;
 	border-color: #71b045;
 }
 
@@ -40,10 +40,11 @@ a:visited, a:hover {
 }
 
 .btn-lg {
-	padding: .8rem 1.4rem;
+	padding: .9rem 1.5rem;
   font-size: 0.7rem;
   line-height: 1.5;
   border-radius: .1rem;
+  letter-spacing: 1.5px;
 }
 
 
