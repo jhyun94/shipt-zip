@@ -18,12 +18,20 @@
 
 body, html {
 	font-family: "Scandia", san-serif;
+	letter-spacing: 1.5px;
 }
 
 a:visited, a:hover {
 	text-decoration: none;
 }
 
+.bg-gray {
+  background-color: #414042;
+}
+
+/*==========
+	Buttons
+===========*/
 .btn-primary {
 	border-color: #71b045;
 	background-color: #71b045;
@@ -35,9 +43,7 @@ a:visited, a:hover {
 	border-color: #71b045;
 }
 
-.bg-gray {
-  background-color: #414042;
-}
+
 
 .btn-lg {
 	padding: .9rem 1.5rem;
@@ -50,16 +56,14 @@ a:visited, a:hover {
 
 
 
-
-
-
-
-
-
+/*============
+	Backgrounds
+=============*/
 
 .bg-target {
   background: url('./images/bg-target.svg') no-repeat center center;
   background-size: cover;
+  height: 470px;
 }
 
 
