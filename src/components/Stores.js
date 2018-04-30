@@ -5,6 +5,7 @@ class Stores extends Component {
 
 	renderStores() {
 		const stores = _.sortBy(this.props.stores, 'name');
+
 		return (
 			_.map( stores,  (store) => {
 				return (
@@ -32,11 +33,26 @@ class Stores extends Component {
 
 		return `Coming ${month}/${year}`
 
-
 	}
+
+	isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
 
 
 	render() {
+		if ( this.isEmpty(this.props.stores)) {
+			return (
+				<div className="my-5 text-center">
+					<h4>Coming soon in your area!</h4>
+				</div>
+			)
+		}
+
 		return (
 			<div className="container">
 				<p className="text-center"><small>Delivering From:</small></p>
