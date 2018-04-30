@@ -34,6 +34,7 @@ class Landing extends Component {
 
 	onSubmit(values) {
 		this.props.fetchStores(values);
+		this.props.reset();
 	}
 
 	render() {
