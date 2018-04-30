@@ -20,6 +20,9 @@ body, html {
 	font-family: "Scandia", san-serif;
 }
 
+a:visited, a:hover {
+	text-decoration: none;
+}
 
 .btn-primary {
 	border-color: #71b045;
@@ -58,3 +61,26 @@ body, html {
   background-size: cover;
 }
 
+
+/*===========
+	Promo
+============*/
+
+.promo {
+	text-align: center;
+	height: 28px;
+}
+
+.promo p{
+	font-size: 11px;
+	letter-spacing: 1.5px;
+	line-height: 28px;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 0 auto;
+}
+
+.promo p:hover {
+	background-color: #71b045;
+	text-decoration: none !important;
+}
