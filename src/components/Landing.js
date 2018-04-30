@@ -13,9 +13,11 @@ import step3 from '../images/step-3.png';
 class Landing extends Component {
 
 	inputField(field) {
+
+		const errorClass = `${field.meta.touched && field.meta.error ? 'alert alert-warning' : ''}`;
 		return (
 			<div>
-				<div className="input-group justify-content-center input-group-lg">
+				<div className="input-group input-group-lg mb-2">
 					<input type="text" className="form-control" placeholder="Enter ZIP code"
 					{...field.input}
 					/>
@@ -23,7 +25,7 @@ class Landing extends Component {
 						<button type="submit" className="btn btn-primary">GET STARTED</button>
 					</div>
 				</div>
-				<div className="text-help">
+				<div className={errorClass}>
 					{field.meta.touched && field.meta.error ? field.meta.error : ''}
 				</div>
 			</div>
