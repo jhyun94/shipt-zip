@@ -44,7 +44,7 @@ class Landing extends Component {
 				<div className="container my-3 find-store">
 					<div className="bg-target py-3 px-3">
 						<div className="row justify-content-center align-items-center h-100">
-							<div className="text-white col-lg-8 text-center">
+							<div className="text-white col-md-8 text-center">
 								<h1>Target exclusive offer.</h1>
 								<h5 className="mb-3">$49 membership (reg. $99) + $15 credit with qualifying purchase.*</h5>
 								<form className="mb-3"onSubmit={handleSubmit(this.onSubmit.bind(this))}>
@@ -67,10 +67,10 @@ class Landing extends Component {
 
 				<div className="container py-3 px-3">
 					<div className="row">
-						<div className="col-lg-8 offset-lg-2 px-3">
+						<div className="col-md-8 offset-md-2 px-3">
 							<h2 className="text-center">Everything you love about Target at your fingertips</h2>
 						</div>
-						<div className="col-lg-4 text-center">
+						<div className="col-md-4 text-center">
 							<img src={step1} alt="step 1" className="img-fluid"/>
 							<h4 className="px-5">Scroll through the aisles.</h4>
 							<p className="px-3">Create an order from your local store in our app or
@@ -78,7 +78,7 @@ class Landing extends Component {
 							</p>
 						</div>
 
-						<div className="col-lg-4 text-center">
+						<div className="col-md-4 text-center">
 							<img src={step2} alt="step 2" className="img-fluid"/>
 							<h4 className="px-5">Our shoppers work their magic.</h4>
 							<p className="px-3">Connect with your shopper and get live updates from
@@ -86,7 +86,7 @@ class Landing extends Component {
 							</p>
 						</div>
 
-						<div className="col-lg-4 text-center">
+						<div className="col-md-4 text-center">
 							<img src={step3} alt="step 3" className="img-fluid"/>
 							<h4 className="px-5">We deliver your groceries.</h4>
 							<p className="px-3">Schedule a delivery, and your order will arrive in
@@ -94,7 +94,7 @@ class Landing extends Component {
 							</p>
 						</div>
 
-						<div className="col-lg-4 offset-lg-4 my-5">
+						<div className="col-md-4 offset-lg-4 my-5">
 							<a className="btn btn-primary btn-lg btn-block" href="/">GET STARTED</a>
 						</div>
 					</div>
