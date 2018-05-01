@@ -14,7 +14,8 @@ class Landing extends Component {
 
 	inputField(field) {
 
-		const errorClass = `${field.meta.touched && field.meta.error ? 'alert alert-warning' : ''}`;
+		const errorClass = `${field.meta.touched && field.meta.error ? 'invalid-feedback text-left' : ''}`;
+		console.log(field);
 		return (
 			<div>
 				<div className="input-group input-group-lg mb-2">
