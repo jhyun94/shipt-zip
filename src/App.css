@@ -104,12 +104,12 @@ a:visited, a:hover {
 .find-store h5 {
 	letter-spacing: -.55px;
 	font-weight: 400;
-	width: 60%;
+	width: 50%;
 	margin: 0 auto;
 }
 
 .find-store form {
-	width: 60%;
+	width: 50%;
 	margin: 0 auto;
 }
 
@@ -129,6 +129,32 @@ a:visited, a:hover {
 	background-image: url('./images/zip-location.png');
 	background-repeat: no-repeat;
 	background-position: 6%
+}
+
+@media ( max-width: 992px) {
+	.find-store .input-group > .form-control {
+		display: block;
+		width: 100%;
+		margin-bottom : .5rem;
+		border-radius: 0;
+		padding-left: 15%;
+	}
+
+	.find-store .input-group-append {
+		width: 100%;
+	}
+
+	.find-store .input-group-append > .btn {
+		display: block;
+		width: 100%;
+		border-radius: 0
+	}
+
+	.find-store h5, .find-store form {
+		width: 100%;
+	}
+
+
 }
 
 

@@ -44,7 +44,7 @@ class Landing extends Component {
 				<div className="container my-3 find-store">
 					<div className="bg-target py-3 px-3">
 						<div className="row justify-content-center align-items-center h-100">
-							<div className="text-white col-md-8 text-center">
+							<div className="text-white col-md-12 text-center">
 								<h1>Target exclusive offer.</h1>
 								<h5 className="mb-3">$49 membership (reg. $99) + $15 credit with qualifying purchase.*</h5>
 								<form className="mb-3"onSubmit={handleSubmit(this.onSubmit.bind(this))}>
