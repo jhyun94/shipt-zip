@@ -67,7 +67,7 @@ class Landing extends Component {
 
 				<div className="container py-3 px-3">
 					<div className="row">
-						<div className="col-lg-8 offset-lg-2 px-3">
+						<div className="col-lg-8 offset-lg-2 px-3 mb-3">
 							<h2 className="text-center h2">Everything you love about Target at your fingertips</h2>
 						</div>
 						<div className="col-lg-4 text-center">

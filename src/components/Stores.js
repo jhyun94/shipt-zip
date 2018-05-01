@@ -9,9 +9,9 @@ class Stores extends Component {
 		return (
 			_.map( stores,  (store) => {
 				return (
-					<div key={store.id} className="col-md-4 my-5">
+					<div key={store.id} className="col-md-3 my-4">
 						<div className="text-center">
-							<h3 className="mb-4">{store.name}</h3>
+							<h3 className="mb-3">{store.name}</h3>
 							<p className="text-secondary"><small>{this.checkDate(store.launch_date)}</small></p>
 						</div>
 					</div>
@@ -54,9 +54,9 @@ class Stores extends Component {
 		}
 
 		return (
-			<div className="container">
+			<div className="container mb-3">
 				<p className="text-center"><small>Delivering From:</small></p>
-				<div className="row">
+				<div className="row justify-content-center">
 					{this.renderStores()}
 				</div>
 				<div className="text-center">
