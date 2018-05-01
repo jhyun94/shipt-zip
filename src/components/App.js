@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 import '../App.css';
 
 import Promotional from './Promotional';
@@ -13,11 +12,7 @@ class App extends Component {
       <div>
         <Promotional />
         <Header />
-        <BrowserRouter>
-          <div>
-            <Route exact path="/" component={Landing} />
-          </div>
-        </BrowserRouter>
+        <Landing />
         <Footer />
       </div>
     );
