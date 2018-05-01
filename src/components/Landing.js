@@ -41,13 +41,13 @@ class Landing extends Component {
 		const { handleSubmit } = this.props;
 		return (
 			<div>
-				<div className="container my-3">
+				<div className="container my-3 find-store">
 					<div className="bg-target py-3 px-3">
 						<div className="row justify-content-center align-items-center h-100">
-							<div className="text-white col-lg-8">
-								<h1 className="h1">Target exclusive offer.</h1>
-								<h5>$49 membership (reg. $99) + $15 credit with qualifying purchase.*</h5>
-								<form className="form" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+							<div className="text-white col-lg-8 text-center">
+								<h1>Target exclusive offer.</h1>
+								<h5 className="mb-3">$49 membership (reg. $99) + $15 credit with qualifying purchase.*</h5>
+								<form className="mb-3"onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 									<div className="text-center">
 											<Field
 												name="zipcode"
@@ -55,9 +55,9 @@ class Landing extends Component {
 											/>
 									</div>
 								</form>
-								<p><small>*Membership offer valid for new members only. Target order of $100 or more must be 
+								<p className="small-print w-75 mx-auto">*Membership offer valid for new members only. Target order of $100 or more must be 
 								placed to qualify for $15 credit, which expires 30 days after qualifying order is placed 
-								and can be applied to any order from Shipt.</small></p>
+								and can be applied to any order from Shipt.</p>
 							</div>
 						</div>
 					</div>

@@ -18,7 +18,6 @@
 
 body, html {
 	font-family: "Scandia", san-serif;
-	letter-spacing: 1.5px;
 }
 
 a:visited, a:hover {
@@ -29,6 +28,10 @@ a:visited, a:hover {
   background-color: #414042;
 }
 
+.small-print {
+	letter-spacing: 0.05px;
+	font-size: 10px;
+}
 /*==========
 	Buttons
 ===========*/
@@ -89,3 +92,35 @@ a:visited, a:hover {
 	background-color: #71b045;
 	text-decoration: none !important;
 }
+
+.find-store h1 {
+	letter-spacing: 1.5px;
+	font-weight: 400;
+}
+
+.find-store h5 {
+	letter-spacing: -.55px;
+	font-weight: 400;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.find-store form {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.find-store .input-group > .form-control {
+	padding: 14px;
+	font-size: 14px;
+}
+
+.find-store .input-group-append > .btn {
+	padding: 14px;
+	font-size: 12px;
+	letter-spacing: 1.5px;
+}
+
+
+
+
