@@ -20,6 +20,10 @@ body, html {
 	font-family: "Scandia", san-serif;
 }
 
+.h2 {
+	font-size: 36px;
+}
+
 a:visited, a:hover {
 	text-decoration: none;
 }
@@ -150,11 +154,12 @@ a:visited, a:hover {
 		border-radius: 0
 	}
 
+}
+
+@media ( max-width: 768px) {
 	.find-store h5, .find-store form {
 		width: 100%;
 	}
-
-
 }
 
 
