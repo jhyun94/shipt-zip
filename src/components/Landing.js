@@ -18,7 +18,7 @@ class Landing extends Component {
 		return (
 			<div>
 				<div className="input-group input-group-lg mb-2">
-					<input type="text" className="form-control" placeholder="Enter ZIP code"
+					<input type="text" className="form-control zip-icon" placeholder="Enter ZIP code"
 					{...field.input}
 					/>
 					<div className="input-group-append">
